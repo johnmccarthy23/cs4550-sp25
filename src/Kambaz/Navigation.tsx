@@ -1,7 +1,7 @@
 import { AiOutlineDashboard } from "react-icons/ai";
-import { IoCalendarOutline } from "react-icons/io5";
-import { LiaBookSolid, LiaCogSolid } from "react-icons/lia";
-import { FaInbox, FaRegCircleUser } from "react-icons/fa6";
+
+import { LiaBookSolid } from "react-icons/lia";
+import { FaRegCircleUser } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 export default function KambazNavigation() {
   return (
@@ -26,5 +26,5 @@ export default function KambazNavigation() {
                bg-black text-center border-0">
     <LiaBookSolid className="fs-1 text-danger" /><br />
     Courses </Link><br />
-    {/* complete styling the rest of the links */}
+   
 </div>);}
