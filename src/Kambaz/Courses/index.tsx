@@ -20,7 +20,7 @@ export default function Courses() {
             </div>
     <div className="flex-fill">
             <Routes>
-              <Route path="/" element={<Navigate to="/Kambaz/Courses" />} />
+              <Route path="/" element={<Navigate to="Home" />} />
               <Route path="/Courses/*" element={<Courses />} />
               <Route path="Modules" element={<Modules />} />
               <Route path="Assignments" element={<Assignments />} />
