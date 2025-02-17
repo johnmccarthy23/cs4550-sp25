@@ -1,5 +1,7 @@
 import { Form, Col, Row, Button } from "react-bootstrap";
 
+export default function BootstrapForms() {
+  return (
 <div id="wd-css-responsive-forms-2">
   <h3>Responsive forms</h3>
   <Form>
@@ -41,6 +43,7 @@ import { Form, Col, Row, Button } from "react-bootstrap";
    </Form.Group>
   </Form>
 </div>
+  )};
 
 
 

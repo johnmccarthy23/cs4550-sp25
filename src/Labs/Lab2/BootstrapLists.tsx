@@ -1,5 +1,6 @@
 import { ListGroup } from "react-bootstrap";
-
+export default function BootstrapLists() {
+  return (
 <div id="wd-css-hyperlink-list">
   <h3>Favorite books</h3>
   <ListGroup>
@@ -22,3 +23,4 @@ href="https://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_(novel)">
       Add another book     </ListGroup.Item>
   </ListGroup>
 </div>
+  )};

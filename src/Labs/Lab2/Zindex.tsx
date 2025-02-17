@@ -1,4 +1,6 @@
-<div id="wd-z-index">
+export default function Zindex() {
+  return (
+    <div id="wd-z-index">
   <h2>Z index</h2>
   <div className="wd-pos-relative">
     <div className="wd-pos-absolute-10-10 
@@ -16,3 +18,4 @@
     </div>
   </div><br /><br /><br /><br /><br /><br /><br />
 </div>
+  )};

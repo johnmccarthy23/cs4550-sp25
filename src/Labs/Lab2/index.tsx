@@ -1,5 +1,23 @@
 import { Container } from "react-bootstrap";
 import "./index.css";
+import ForegroundColors from "./ForegroundColors";
+import BackgroundColors from "./BackgroundColors";
+import Borders from "./Borders";
+import Corners from "./Corners";
+import Dimensions from "./Dimensions";
+import Margins from "./Margins";
+import Padding from "./Padding";
+import Positions from "./Positions";
+import Flex from "./Flex";
+import Float from "./Float";
+import GridLayout from "./GridLayout";
+import Zindex from "./Zindex";
+import BootstrapForms from "./BootstrapForms";
+import BootstrapGrids from "./BootstrapGrids";
+import BootstrapLists from "./BootstrapLists";
+import BootstrapNavigation from "./BootstrapNavigation";
+import BootstrapTables from "./BootstrapTables";
+
 export default function Lab2() {
     return (
       <Container>
@@ -53,5 +71,23 @@ Here's another paragraph using a different ID and a different look and
     </div>
   </div>
 </div>
+
+<ForegroundColors />
+<BackgroundColors />
+<Borders />
+<Corners />
+<Dimensions />
+<Margins />
+<Padding />
+<Positions />
+<Flex />
+<Float />
+<GridLayout />
+<Zindex />
+<BootstrapForms />
+<BootstrapGrids />
+<BootstrapLists />
+<BootstrapNavigation />
+<BootstrapTables />
       </Container>
       );}

@@ -25,6 +25,12 @@ export default function ModulesControls() {
          
        </Dropdown.Menu>
      </Dropdown>
-     
+     <Button variant="secondary" size="lg" id="wd-view-progress-btn" className="float-end me-3">
+      View Progress
+     </Button>
+     <Button variant="secondary" size="lg" id="wd-collapse-all-btn" className="float-end me-4">
+      Collapse All
+     </Button>
+
    </div>
 );}

@@ -1,5 +1,6 @@
 import { Card, Button } from "react-bootstrap";
-
+export default function BootstrapNavigation() {
+  return (
 <div id="wd-css-navigating-with-cards">
   <h2>
     Cards
@@ -15,3 +16,4 @@ import { Card, Button } from "react-bootstrap";
     </Card.Body>
   </Card>
 </div>
+  )};

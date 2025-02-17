@@ -1,3 +1,6 @@
+
+export default function BackgroundColors() {
+  return (
 <div id="wd-css-background-colors">
   <h3 className="wd-bg-color-blue wd-fg-color-white">Background color</h3>
   <p className="wd-bg-color-red wd-fg-color-black">
@@ -7,3 +10,4 @@
     </span>
   </p>
 </div>
+)}
