@@ -1,6 +1,6 @@
 import { Form, Row, Col, InputGroup, ListGroup } from "react-bootstrap";
 import { FaMagnifyingGlass, FaFileCircleCheck } from "react-icons/fa6";
-import { useParams, Link } from "react-router";
+import { useParams } from "react-router";
 import * as db from "../../Database";
 import { BsGripVertical } from "react-icons/bs";
 import AssignmentHeaderButtons from "./AssignmentHeaderButtons";
