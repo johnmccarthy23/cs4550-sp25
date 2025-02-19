@@ -9,7 +9,7 @@ export default function CourseNavigation() {
   return (
     links.map((link) => (
       <ListGroup>
-      <ListGroup.Item key={`/Kambaz/Courses/${course._id}/${link}`} as={Link} to={`/Kambaz/Courses/${course._id}/${link}`} className={`bg-black text-center border-0
+      <ListGroup.Item key={`/Kambaz/Courses/${course?._id}/${link}`} as={Link} to={`/Kambaz/Courses/${course?._id}/${link}`} className={`bg-black text-center border-0
             ${pathname.includes(link) ? "text-danger bg-white" : "text-danger bg-white underline"}`}>
         <br />
         {link}
