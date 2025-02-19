@@ -1,10 +1,14 @@
 import { Form, Row, Col, InputGroup, ListGroup } from "react-bootstrap";
 import { FaMagnifyingGlass, FaFileCircleCheck } from "react-icons/fa6";
+import { useParams, Link } from "react-router";
+import * as db from "../../Database";
 import { BsGripVertical } from "react-icons/bs";
 import AssignmentHeaderButtons from "./AssignmentHeaderButtons";
 import AssignmentControlButtons from "./AssignmentControlButtons";
 import AssignmentControls from "./AssignmentControls";
 export default function Assignments() {
+  const { cid } = useParams();
+  const assignments = db.assignments;
     return (
       <div>
         <Form>
@@ -27,6 +31,25 @@ export default function Assignments() {
                       </Col>
           </Row>
           </Form>
+          <div className="wd-title p-3 ps-2 bg-secondary">
+          <ListGroup className="rounded-0" id="wd-assignments">
+          <BsGripVertical className="me-2 fs-3" /> Assignments
+      <AssignmentHeaderButtons/>
+      {assignments
+          .filter((assignment: any) => assignment.course === cid)
+          .map((assignment: any) => (
+          <ListGroup.Item action href={`http://localhost:5173/index.html#/Kambaz/Courses/${assignment.course._id}/Assignments/${assignment._id}`} 
+          className="wd-assignment list-group-item p-0 mb-5 fs-5 border-gray">
+           <div className="wd-title p-3 ps-2 bg-secondary">
+              <BsGripVertical className="me-2 fs-3" /> <FaFileCircleCheck className="text-success me-2 fs-3"/>
+              {assignment.title} <AssignmentControlButtons />
+            </div>
+            </ListGroup.Item>))}
+            </ListGroup>
+            </div>
+      </div>
+  );}
+     /*
       <div className="wd-title p-3 ps-2 bg-secondary"> 
       <BsGripVertical className="me-2 fs-3" /> Assignments
       <AssignmentHeaderButtons/>
@@ -43,4 +66,4 @@ export default function Assignments() {
           A3 - JAVASCRIPT + REACT <AssignmentControlButtons/> </ListGroup.Item>
       </ListGroup>
        </div>
-  );}
+       */
