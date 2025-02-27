@@ -1,6 +1,17 @@
 import { ListGroup } from "react-bootstrap";
 export default function BootstrapLists() {
   return (
+    <div>
+      <div id="wd-css-styling-lists">
+  <h2>Favorite movies</h2>
+  <ListGroup>
+    <ListGroup.Item active>Aliens</ListGroup.Item>
+    <ListGroup.Item>Terminator</ListGroup.Item>
+    <ListGroup.Item>Blade Runner</ListGroup.Item>
+    <ListGroup.Item>Lord of the Ring</ListGroup.Item>
+    <ListGroup.Item disabled>Star Wars</ListGroup.Item>
+  </ListGroup>
+</div>
 <div id="wd-css-hyperlink-list">
   <h3>Favorite books</h3>
   <ListGroup>
@@ -22,5 +33,6 @@ href="https://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_(novel)">
     <ListGroup.Item action onClick={() => alert("New book added")}>
       Add another book     </ListGroup.Item>
   </ListGroup>
+</div>
 </div>
   )};

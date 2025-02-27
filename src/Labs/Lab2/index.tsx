@@ -17,6 +17,8 @@ import BootstrapGrids from "./BootstrapGrids";
 import BootstrapLists from "./BootstrapLists";
 import BootstrapNavigation from "./BootstrapNavigation";
 import BootstrapTables from "./BootstrapTables";
+import ReactIconsSampler from "./ReactIcons";
+import ScreenSizeLabel from "./ScreenSizeLabel";
 
 export default function Lab2() {
     return (
@@ -84,10 +86,12 @@ Here's another paragraph using a different ID and a different look and
 <Float />
 <GridLayout />
 <Zindex />
+<ReactIconsSampler/>
 <BootstrapForms />
 <BootstrapGrids />
 <BootstrapLists />
 <BootstrapNavigation />
 <BootstrapTables />
+<ScreenSizeLabel/>
       </Container>
       );}
