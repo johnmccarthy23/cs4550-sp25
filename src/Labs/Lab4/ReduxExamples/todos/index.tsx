@@ -1,4 +1,4 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 export default function todosRedux() {
   const { message } = useSelector((state: any) => state.todosReducer);
   return (
