@@ -1,7 +1,6 @@
 import AddRedux from "./AddRedux";
 import CounterRedux from "./CounterRedux";
 import HelloRedux from "./HelloRedux";
-import todosRedux from "./todos";
 
 export default function ReduxExamples() {
   return(
@@ -10,7 +9,6 @@ export default function ReduxExamples() {
       <HelloRedux/>
       <CounterRedux/>
       <AddRedux/>
-      <todosRedux/>
     </div>
   );
 };
