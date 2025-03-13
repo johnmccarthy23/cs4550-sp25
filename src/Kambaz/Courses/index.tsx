@@ -25,7 +25,7 @@ export default function Courses({ courses }: { courses: any[]; }) {
     <div className="flex-fill">
             <Routes>
               <Route path="/*" element={<Home />} />
-              <Route path="/Courses/*" element={<Courses />} />
+              <Route path="/Courses/*" element={<Courses courses={[]} />} />
               <Route path="Modules" element={<Modules />} />
               <Route path="Assignments" element={<Assignments />} />
               <Route path="Assignments/:aid" element={<AssignmentEditor/>} />
