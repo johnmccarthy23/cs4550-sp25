@@ -1,4 +1,3 @@
-import { useSelector } from "react-redux";
 import { FormControl } from "react-bootstrap";
 import { Col, Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -9,7 +8,6 @@ export default function Dashboard(
     addNewCourse: () => void; deleteCourse: (course: any) => void;
     updateCourse: () => void; })
    {
-    const { currentUser } = useSelector((state: any) => state.accountReducer);
     return (
     <div className="p-4" id="wd-dashboard">
       <h1 id="wd-dashboard-title">Dashboard</h1> <hr />
