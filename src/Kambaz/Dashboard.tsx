@@ -1,8 +1,7 @@
 import { useSelector } from "react-redux";
 import { FormControl } from "react-bootstrap";
-import { Col, Row, Card, Button } from "react-bootstrap";
+import { Col, Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import * as db from "./Database";
 export default function Dashboard(
   { courses, course, setCourse, addNewCourse,
     deleteCourse, updateCourse }: {
@@ -11,7 +10,6 @@ export default function Dashboard(
     updateCourse: () => void; })
    {
     const { currentUser } = useSelector((state: any) => state.accountReducer);
-    const { enrollments } = db;
     return (
     <div className="p-4" id="wd-dashboard">
       <h1 id="wd-dashboard-title">Dashboard</h1> <hr />
@@ -27,19 +25,13 @@ export default function Dashboard(
       <br />
       <FormControl value={course.name} className="mb-2"
       onChange={(e) => setCourse({ ...course, name: e.target.value }) } />
-      <FormControl value={course.description} rows={3}
+      <FormControl value={course.description}
       onChange={(e) => setCourse({ ...course, description: e.target.value }) } />
       <hr />
       <h2 id="wd-dashboard-published">Published Courses ({courses.length})</h2> <hr />
       <div className="row" id="wd-dashboard-courses">
         <div className="row row-cols-1 row-cols-md-5 g-4">
-          {courses
-              .filter((course) =>
-              enrollments.some(
-                (enrollment) =>
-                  enrollment.user === currentUser._id &&
-                  enrollment.course === course._id
-                 ))        
+          {courses       
           .map((course) => (
             <Col className="wd-dashboard-course col" style={{ width: "300px" }}>
               <Card>
