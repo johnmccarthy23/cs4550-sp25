@@ -3,14 +3,19 @@ import { Col, Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 export default function Dashboard(
   { courses, course, setCourse, addNewCourse,
-    deleteCourse, updateCourse }: {
+    deleteCourse, updateCourse, enrolling, setEnrolling, updateEnrollment }: {
     courses: any[]; course: any; setCourse: (course: any) => void;
     addNewCourse: () => void; deleteCourse: (course: any) => void;
-    updateCourse: () => void; })
+    updateCourse: () => void; enrolling: boolean; setEnrolling: (enrolling: boolean) => void; 
+    updateEnrollment: (courseId: string, enrolled: boolean) => void })
    {
     return (
     <div className="p-4" id="wd-dashboard">
-      <h1 id="wd-dashboard-title">Dashboard</h1> <hr />
+      <h1 id="wd-dashboard-title">Dashboard
+      <button onClick={() => setEnrolling(!enrolling)} className="float-end btn btn-primary" >
+          {enrolling ? "My Courses" : "All Courses"}
+        </button>
+        </h1> <hr />
       <h5>New Course
           <button className="btn btn-primary float-end"
                   id="wd-add-new-course-click"
@@ -37,6 +42,15 @@ export default function Dashboard(
                       className="wd-dashboard-course-link text-decoration-none text-dark" >
                   <Card.Img src="/images/reactjs.jpg" variant="top" width="100%" height={160} />
                   <Card.Body className="card-body">
+                  {enrolling && (
+              <button  onClick={(event) => {
+                event.preventDefault();
+                updateEnrollment(course._id, !course.enrolled);
+              }}
+              className={`btn ${ course.enrolled ? "btn-danger" : "btn-success" } float-end`} >
+                {course.enrolled ? "Unenroll" : "Enroll"}
+              </button>
+            )}
                     <Card.Title className="wd-dashboard-course-title text-nowrap overflow-hidden">
                       {course.name} </Card.Title>
                     <Card.Text className="wd-dashboard-course-description overflow-hidden" style={{ height: "100px" }}>
