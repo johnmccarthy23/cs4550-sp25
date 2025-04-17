@@ -2,7 +2,6 @@ import { Table } from "react-bootstrap";
 import { FaUserCircle } from "react-icons/fa";
 import { Link } from "react-router";
 import PeopleDetails from "./Details";
-import * as client from "../../Account/client";
 export default function PeopleTable({ users = [] }: { users?: any[] }) {
  return (
   <div id="wd-people-table">

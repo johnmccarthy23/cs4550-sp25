@@ -13,20 +13,20 @@ export default function Modules() {
   const [moduleName, setModuleName] = useState("");
   const { modules } = useSelector((state: any) => state.modulesReducer);
   const dispatch = useDispatch();
-  const createModuleForCourse = async () => {
-    if (!cid) return;
-    const newModule = { name: moduleName, course: cid };
-    const module = await courseClient.createModuleForCourse(cid, newModule);
-    dispatch(addModule(module));
-  };
-  const removeModule = async (moduleId: string) => {
-    await modulesClient.deleteModule(moduleId);
-    dispatch(deleteModule(moduleId));
-  };
-  const saveModule = async (module: any) => {
-    await modulesClient.updateModule(module);
-    dispatch(updateModule(module));
-  };
+  // const createModuleForCourse = async () => {
+    // if (!cid) return;
+    // const newModule = { name: moduleName, course: cid };
+    // const module = await courseClient.createModuleForCourse(cid, newModule);
+    // dispatch(addModule(module));
+  // };
+  // const removeModule = async (moduleId: string) => {
+    // await modulesClient.deleteModule(moduleId);
+    // dispatch(deleteModule(moduleId));
+  // };
+  // const saveModule = async (module: any) => {
+    // await modulesClient.updateModule(module);
+    // dispatch(updateModule(module));
+  // };
   const fetchModules = async () => {
     const modules = await courseClient.findModulesForCourse(cid as string);
     dispatch(setModules(modules));
